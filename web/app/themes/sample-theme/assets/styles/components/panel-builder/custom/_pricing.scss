@@ -1,0 +1,174 @@
+/**
+ * A component for a pricing panel
+ *
+ * TODO: Break out c-table into it's own file
+ * and leave overrides in this
+ *
+ * Set a width variable to implement media query breakpoint
+ * as the global site breakpoints are not suitable.
+ */
+
+
+$pricing-width: 1040px;
+
+.c-pricing {
+  .c-stack__dropdown {
+    font-size: 1rem;
+    font-weight: 100;
+    padding: 1rem 1rem 0 1rem;
+    text-transform: none;
+    .ui.dropdown.selection {
+      min-width: auto;
+      width: 100%;
+    }
+  }
+  .c-stack--pricing,
+  .c-pricing__note {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    @include grid-media($pricing) {
+      width: 100%;
+    }
+  }
+  .c-pricing__note {
+    font-weight: 100;
+    margin-bottom: 4rem;
+    @include grid-media($mobile) {
+      display: none;
+    }
+  }
+  .c-stack--pricing {
+    margin-bottom: 3rem;
+  }
+  .c-stack--pricing::after,
+  .c-table--pricing::after,
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.c-stack {
+  text-align: center;
+  .c-stack__button {
+    height: 5rem;
+    @include h-center();
+  }
+  .c-stack__link {
+    height: 3rem;
+    // @include h-center();
+  }
+  .c-stack__price {
+    font-size: 2.5rem;
+    font-weight: normal;
+    height: 11rem;
+    text-transform: uppercase;
+    &--professional {
+      height: 12.5rem;
+    }
+    &--vendor {
+      height: 8rem;
+    }
+    .h-lang--ja & {
+      font-size: 1.5rem;
+    }
+  }
+  .c-stack__product {
+    font-size: 1.6rem;
+    font-weight: 100;
+    height: 4.6rem;
+    margin: 0;
+    padding: 1rem;
+    &--professional {
+      height: 1.6rem;
+      padding-bottom: 0;
+    }
+    .h-lang--ja & {
+      font-size: 1.2rem;
+    }
+  }
+  .c-stack__product-title {
+    font-weight: 100;
+  }
+  .c-stack__text {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+    margin: 0;
+    text-transform: none;
+    &.c-stack__text--currency {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+    &.c-stack__text--note {
+      font-weight: 100;
+      font-size: 1rem;
+      margin-top: 1.5rem;
+    }
+    &.c-stack__text--num-users {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 1.5rem 0 0.5rem 0;
+      text-transform: none;
+    }
+    &.c-stack__text--period {
+      font-weight: 300;
+      font-size: 1rem;
+      text-transform: none;
+    }
+    &.c-stack__text--users {
+      font-size: 0.8rem;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+  .c-stack__users {
+    background-color: rgba(255, 255, 255, 0.4);
+    height: 3rem;
+    padding: 1rem;
+    @include h-center();
+  }
+}
+
+.c-table {
+  margin-bottom: 2rem;
+  text-align: center;
+  .c-table__list {
+    padding: 0 1rem;
+    li {
+      // border-bottom: 1px solid $colour--grey-medium-light;
+      // height: 1.5rem;
+      line-height: 1.5rem;
+      list-style-type: disc;
+      padding-left: 0rem;
+      // padding-top: 1rem;
+      // padding-bottom: 1rem;
+      text-align: left;
+      // &.h-double-height {
+      //   min-height: 5rem;
+      //   @include grid-media(max-width 1000px) {
+      //     min-height: 7rem;
+      //   }
+      // }
+    }
+  }
+  .c-table__list--labels {
+    li {
+      border-bottom: none;
+      padding-right: 1rem;
+      text-align: right;
+    }
+  }
+  @include grid-media($pricing) {
+    display: none;
+  }
+}
+
+.c-link {
+  &.c-link--buy-now {
+    font-weight: 400;
+    line-height: 1rem;
+  }
+}

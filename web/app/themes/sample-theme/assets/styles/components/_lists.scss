@@ -1,0 +1,87 @@
+.c-list-social {
+  li {
+    line-height: 0;
+    margin: 0 0 10px 0;
+
+    @include grid-media($mobile){
+      display: inline-block;
+      margin: 0 10px 2rem 0;
+      text-align: center;
+    }
+  }
+
+  a {
+   display: block;
+  }
+
+  &.c-list-social--footer {
+    margin: 0.5rem 0 1rem 0;
+    text-align: left;
+
+    li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+      position: relative;
+
+      [class^="icon-"]::before,
+      [class*=" icon-"]::before {
+        background-color: $colour--grey-dark;
+      }
+      a:hover [class^="icon-"]::before,
+      a:hover [class*=" icon-"]::before {
+        background-color: $colour--yellow;
+      }       
+    }
+
+    @include grid-media($mobile){
+      text-align: center;
+    }
+  }
+}
+
+.c-list {
+
+  li {
+    font-weight: normal;
+  }
+
+  .c-list__article,
+  .c-list__date {
+    display: inline;
+    font-weight: normal;
+    font-size: 1rem;
+  }
+
+  .c-list__date {
+    margin-right: 0.5rem;
+  }
+
+  &.c-list--footer {
+    text-align: left;
+
+    @include grid-media($mobile){
+      text-align: center;
+    }
+
+    li {
+      display: inline-block;
+      line-height: 2rem;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  &.c-list--column {
+    text-align: left;
+
+    @include grid-media($mobile){
+      text-align: center;
+    }
+
+    li {
+      display: block;
+      font-weight: normal;
+      line-height: 2rem;
+      margin: 0;
+    }
+  }
+}

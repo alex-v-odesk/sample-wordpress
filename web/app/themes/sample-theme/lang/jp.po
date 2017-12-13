@@ -1,0 +1,14 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: JAPAN WEBSITE\n"
+"Language: ja\n"
+
+#: 
+msgctxt "Modal Try It Evaluation form"
+msgid "Thanks for trying sample-theme"
+msgstr "お問い合わせ内容"
+

@@ -1,0 +1,442 @@
+/**
+ * Main header navigation menus
+ *
+ * @param .c-nav is the menu look and feel
+ * @param .c-nav-menu is the menu behaviour
+ *
+ * Note: Home page uses same HTML but variant of styles
+ * Note: Some styles target WebKit Chrome specifically
+ *  @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+ */
+
+.c-nav {
+  float: right;
+  font-weight: 100;
+
+  a {
+    color: $colour--grey-dark;
+    transition: all, 0.3s;
+  }
+
+  .c-nav__row {
+    display: flex;
+    justify-content: flex-end;
+
+    // @include grid-media($mobile) {
+    //   display: none;
+    // }
+  }
+
+  .c-nav__mobile {
+    display: none;
+
+    @include grid-media($mobile) {
+      display: flex;
+      justify-content: flex-end;
+      font-size: modular-scale(2);
+    }
+  }
+
+  .c-nav__toggle {
+    line-height: 98px;
+  }
+
+  .c-nav__button {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: center;
+
+    @include grid-media($mobile) {
+      display: none;
+      margin-left: 2rem;
+    }
+  }
+
+  .c-nav__primary {
+    font-size: 1.4rem;
+    display: inline;
+
+    @include grid-media($mobile) {
+      display: none;
+    }
+
+    li {
+      line-height: 1rem;
+    }
+
+    a {
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      &:hover {
+        border-bottom-color: $colour--yellow;
+      }
+    }
+  }
+
+  .c-nav__secondary {
+    display: block;
+    font-size: 1rem;
+    margin: 0.5rem 0 0;
+    width: 100%;
+
+    @include grid-media($mobile) {
+      display: none;
+    }
+
+    ul {
+      text-align: right;
+    }
+
+    li {
+      display: inline;
+      position: relative;
+      margin-right: 0.8rem;
+      line-height: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: $colour--blue;
+        &:hover {
+          color: $colour--yellow;
+        }
+      }
+    }
+  }
+}
+
+.h-home {
+  .c-nav {
+    font-weight: normal;
+    @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
+      zoom: 0.95;
+      letter-spacing: 1px;
+    }
+
+    a {
+      color: #fff;
+    }
+
+    .c-nav__button {
+      display: none;
+    }
+
+    .c-nav__primary {
+      ul.c-nav-menu {
+        > li.c-nav-menu__item {
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .c-nav__secondary {
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+.h-home .has-white-bg {
+  .c-nav {
+    font-weight: 100;
+    a {
+      color: inherit;
+    }
+
+    .c-nav__primary {
+      ul.c-nav-menu {
+        > li.c-nav-menu__item {
+          &:last-child {
+            margin-right: 1.8rem;
+          }
+        }
+      }
+    }
+
+    .c-nav__secondary {
+      a {
+        color: $colour--blue;
+      }
+    }
+
+    .c-nav__button {
+      display: flex;
+      @include grid-media($mobile) {
+        display: none;
+      }
+    }
+  }
+}
+
+
+ul.c-nav-menu {
+  > li.c-nav-menu__item {
+    line-height: 4.2rem;
+    display: inline-block;
+    margin-right: 0.8rem;
+    &:last-child {
+      margin-right: 1.8rem;
+    }
+  }
+}
+
+ul.c-mega-menu {
+  background-color: $colour--grey-dark;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  left: 0;
+  justify-content: space-between;
+  line-height: 1rem;
+  margin: 0;
+  padding: 0px 0 60px 0;
+  position: absolute;
+  right: 0;
+  width: 100%;
+
+  a {
+    color: inherit;
+  }
+
+  li {
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1rem;
+  }
+}
+
+li.c-mega-menu__item {
+  border-right: 1px solid $colour--grey-dark;
+  display: block;
+  margin: 40px 0 0 0;
+  padding: 10px 30px 16px 30px;
+  height: auto;
+  width: 100%;
+  z-index: 1000;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.h-lang--ja {
+  li.c-mega-menu__item {
+    padding: 10px 20px 16px 20px;
+  }
+}
+
+ul.c-nested-menu {
+  display: block;
+  margin-top: 30px;
+
+  li.c-nested-menu__item {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.8rem;
+  }
+}
+
+// Hover actions
+li.c-nav-menu__item:hover ul.c-mega-menu {
+  display: flex;
+}
+li.c-nav-menu__item:nth-child(4):hover ul.c-mega-menu {
+  display: block;
+}
+li.c-nav-menu__item:nth-child(5):hover ul.c-mega-menu {
+  display: block;
+}
+
+// Temporary show first dropdown for styling
+// ul.c-nav-menu li:nth-child(1) ul.c-mega-menu {
+//   display: flex;
+// }
+
+/**
+ * Platform temporary hack to increase click / hover area
+ */
+ul.c-nav-menu > li:nth-child(1) {
+  padding-left: 6rem;
+}
+
+/**
+ * Platform / Solutions hover states for disabled links
+ */
+ul.c-nav-menu {
+  > li.c-nav-menu__item:nth-child(1),
+  > li.c-nav-menu__item:nth-child(2) {
+    ul.c-mega-menu {
+      li.c-mega-menu__item {
+        > a {
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Solutions specific
+ */
+ul.c-nav-menu {
+  > li.c-nav-menu__item:nth-child(2) {
+    ul.c-mega-menu {
+      // display: flex; // DEL DEL
+      column-count: 2;
+
+      li.c-mega-menu__item {
+        margin-top: 80px;
+        &:first-child {
+          > a.c-mega-menu__link {
+            border-color: transparent;
+          }
+          &::before {
+            content: "Solutions by";
+            color: $colour--yellow;
+            font-size: 1rem;
+            display: table;
+            clear: both;
+            margin-bottom: 2rem;
+            position: absolute;
+            top: 26px;
+          }
+          ul {
+            column-count: 2;
+            column-gap: 80px;
+          }
+        }
+        &:nth-child(3) {
+          &::before {
+            content: "Solutions for";
+            color: $colour--yellow;
+            font-size: 1rem;
+            display: table;
+            clear: both;
+            margin-bottom: 2rem;
+            position: absolute;
+            top: 26px;
+          }
+        }
+        // &:nth-last-child(-n+3) {
+        //   background-color: $colour--grey-medium;
+        // }
+      }
+    }
+  }
+}
+
+.h-lang--ja {
+  ul.c-nav-menu {
+    > li.c-nav-menu__item:nth-child(2) {
+      ul.c-mega-menu {
+        // column-count: 1;
+        // column-gap: 10px;
+
+        li.c-mega-menu__item {
+          &:first-child {
+            &::before {
+              content: "業界・部門別ソリューション";
+            }
+            ul {
+              column-count: 1;
+              // column-gap: 10px;
+              // flex-basis: content;
+            }
+          }
+          &:nth-child(3) {
+            &::before {
+              content: "用途別ソリューション";
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Resources specific
+ */
+ul.c-nav-menu {
+  > li.c-nav-menu__item:nth-child(4) {
+    ul.c-mega-menu {
+      column-count: 1;
+      left: initial;
+      right: initial;
+      width: auto;
+      // Hack
+      min-width: 240px;
+
+      li.c-mega-menu__item:first-child {
+        margin-top: 80px;
+          &::before {
+            content: "Need help?";
+            color: $colour--yellow;
+            font-size: 1rem;
+            display: table;
+            clear: both;
+            margin-bottom: 2rem;
+            position: absolute;
+            top: 26px;
+          }
+      }
+
+      li.c-mega-menu__item {
+        border-right: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.h-lang--ja {
+  ul.c-nav-menu {
+    > li.c-nav-menu__item:nth-child(4) {
+      ul.c-mega-menu {
+        column-count: 1;
+        left: initial;
+        right: initial;
+        width: auto;
+        // Hack
+        min-width: 240px;
+
+        li.c-mega-menu__item:first-child {
+            &::before {
+              content: "その他の詳細情報";
+            }
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Company specific
+ */
+ul.c-nav-menu {
+  > li.c-nav-menu__item:nth-child(5) {
+    ul.c-mega-menu {
+      column-count: 2;
+      left: initial;
+      padding-top: 40px;
+      right: 20px;
+      width: auto;
+
+      li.c-mega-menu__item {
+        border-right: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+// Quick hack to disable pointer
+.js-disable > a {
+  cursor: default;
+}

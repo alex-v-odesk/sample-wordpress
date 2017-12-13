@@ -1,0 +1,90 @@
+// @import '~bourbon-neat/app/assets/stylesheets/neat-helpers';
+
+// // Change the grid settings
+// $column: 105px;
+// $gutter: 50px;
+// $grid-columns: 10;
+// $max-width: 1140px;
+//
+// // Define breakpoints
+// $small: new-breakpoint(max-width 480px 4);
+// $medium: new-breakpoint(min-width 481px max-width $max-width);
+// $large: new-breakpoint(min-width $max-width);
+// $huge: new-breakpoint(min-width 1600px);
+//
+// $mobile: new-breakpoint(max-width 800px 4);
+// $desktop: new-breakpoint(min-width 801px);
+//
+// // Overlay grid
+// $visual-grid: false;
+
+
+$gutter: 50px;
+
+$neat-grid: (
+  columns: 10,
+  gutter: 50px,
+  media: 1140px,
+);
+
+$grid-10-columns: (
+  columns: 10,
+  gutter: 50px,
+  media: 1140px,
+);
+
+$grid-7-columns: (
+  columns: 7,
+  gutter: 20px,
+);
+
+$grid-5-columns: (
+  columns: 5,
+  gutter: 20px,
+);
+
+$grid-4-columns: (
+  columns: 5,
+  gutter: 70px,
+);
+
+$grid-3-columns: (
+  columns: 3,
+  gutter: 100px,
+);
+
+$grid-3-columns--archive: (
+  columns: 3,
+  gutter: 30px,
+);
+
+$grid-3-columns--no-gutter: (
+  columns: 3,
+  gutter: 0,
+);
+
+$grid-2-columns: (
+  columns: 2,
+  gutter: 100px,
+);
+
+$mobile: (
+  // columns: 10,
+  gutter: 10px,
+  media: "(max-width: 800px)",
+);
+
+$desktop: (
+  // columns: 10,
+  // gutter: 50px,
+  // media: 801px,
+  media: "(min-width: 801px)",
+);
+
+$huge: (
+  media: 1600px,
+);
+
+$pricing: (
+  media: "(max-width: 1040px)",
+);

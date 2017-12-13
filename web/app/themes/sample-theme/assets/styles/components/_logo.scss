@@ -1,0 +1,40 @@
+/**
+ * Component to display the brand logo
+ */
+
+.c-logo {
+  background-image: url('../images/logo.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: block;
+  width: 220px;
+
+  &.c-logo--footer {
+    width: 60%;
+    background-image: url('../images/logo-white.svg');
+
+    @include grid-media($mobile){
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @include grid-media($mobile) {
+    width: 160px;
+  }
+}
+
+.h-home .c-logo {
+  background-image: url('../images/logo-white.svg');
+}
+.h-home .has-colour-logo .c-logo {
+  background-image: url('../images/logo.svg');
+}
+
+.c-header .c-logo {
+  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+}

@@ -1,0 +1,68 @@
+body {
+  @include font-source-sans-pro(light, $base-font-size, $base-line-height, $colour--type-base);
+  &.h-lang--ja {
+    @include font-noto-sans-jp(light, $base-font-size, $base-line-height, $colour--type-base);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  font-size: modular-scale(1);
+  font-weight: 100;
+  line-height: $heading-line-height;
+  // margin: 0 0 $small-spacing;
+  margin: 0;
+  .h-lang--ja & {
+    font-family: $font-stack-system--jp;
+  }
+}
+
+h1 {
+  font-size: modular-scale(4);
+}
+
+p {
+  font-weight: normal;
+  margin: 0 0 $small-spacing;
+
+  a {
+    color: $action-color;
+  }
+}
+
+a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: shade($action-color, 25%);
+  }
+}
+
+hr {
+  border-bottom: $base-border;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  margin: $base-spacing 0;
+}
+
+input {
+  @include font-source-sans-pro(light, $base-font-size, $base-line-height, $colour--grey-medium-light);
+}
+.h-lang--ja input {
+  @include font-noto-sans-jp(light, $base-font-size, $base-line-height, $colour--grey-medium-light);
+}

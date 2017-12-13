@@ -1,0 +1,26 @@
+.c-panel {
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .c-panel__image {
+    font-size: 0;
+    // margin-top: 2.5rem; // 40px
+  }
+
+  .c-panel__text {
+    font-size: modular-scale(2);
+    // margin-bottom: 1.75rem;
+    $padding: 16%;
+    // padding: 1.25rem $padding 0 $padding; // 40px bottom total
+  }
+
+  .c-panel__title {
+    $padding: 10%;
+    // padding: 0 $padding 0 $padding; // 60px top total
+  }
+}

@@ -1,0 +1,13 @@
+.c-post__content {
+  .forumComment,
+  .forumQuestion {
+    margin-bottom: 40px;
+    padding: 40px;
+  }
+  .forumComment {
+    border-bottom: 1px solid $colour--grey-medium-light;
+  }
+  .forumQuestion {
+    border: 1px solid $colour--grey-medium-light;
+  }
+}

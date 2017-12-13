@@ -1,0 +1,32 @@
+.c-mobile-menu {
+  margin: 2rem 0 0 2rem;
+
+  a {
+    &:hover {
+      color: $colour--yellow;
+    }
+  }
+
+  li {
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 4rem;
+  }
+
+  ul.c-mobile-child-menu {
+    display: none;
+
+    li {
+      border: none;
+      font-size: 1.2rem;
+      font-weight: normal;
+      line-height: 2.4rem;
+      margin: 0;
+      padding: 0 0 0 30px;
+    }
+  }
+
+  li.c-mobile-menu__item:hover ul {
+    display: inline;
+  }
+}

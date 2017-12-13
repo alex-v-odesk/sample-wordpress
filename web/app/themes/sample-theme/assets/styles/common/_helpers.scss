@@ -1,0 +1,39 @@
+.h-hidden {
+  display: none !important;
+}
+
+.h-hide-text {
+  @include hide-text;
+}
+
+.h-clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+// .h-no-padding--bottom {
+//   padding-bottom: 0;
+// }
+
+.h-text--narrow {
+  padding: 0 30% 0 %30;
+}
+
+.h-mobile-hidden {
+  @include grid-media ($mobile) {
+    display: none !important;
+  }
+}
+.h-desktop-hidden {
+  @include grid-media ($desktop) {
+    display: none !important;
+  }
+}
+
+@mixin h-center {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

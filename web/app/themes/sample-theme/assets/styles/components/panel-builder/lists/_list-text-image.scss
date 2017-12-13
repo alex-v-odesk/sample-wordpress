@@ -1,0 +1,38 @@
+/**
+ * Lists for images with text
+ *
+ */
+
+.c-image-text-list {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+
+  .c-image-text-list__item {
+    $margin: 3rem;
+    margin: 0 $margin 0 $margin;
+    // @include grid-column(1 of 3);
+  }
+
+  .c-image-list__label {
+    margin: 1rem 0 0.5rem 0;
+    &.t-font--medium {
+      font-size: modular-scale(1);
+    }
+    &.t-font--large {
+      font-size: modular-scale(2);
+    }
+  }
+
+  .c-image-list__text {
+    font-weight: normal;
+  }
+}
+
+// Target IE10/11 only
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .c-image-text-list__item {
+    min-width: 5%;
+  }
+}

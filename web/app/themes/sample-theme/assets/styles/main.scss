@@ -1,0 +1,104 @@
+// CSS Styleguide
+//
+// @credit https://github.com/chris-pearce/css-guidelines
+//
+// Namespacing convention
+//      l-         layout (elsewhere this might be o-grid)
+//      c-         component
+//      o-         user selected from page builder interface
+//      t-         theme variation for component, set by user
+//      h-         helper/utility/tool
+//      is-/has-   state definition
+//      js-        JavaScript behaviour attached
+
+
+// Define project variables
+@import 'common/variables';
+@import 'common/settings';
+
+// Import npm dependencies
+@import '~normalize.css/normalize.css';
+@import '~font-awesome/scss/font-awesome';
+@import '~bourbon/app/assets/stylesheets/bourbon';
+// @import '~bourbon-neat/app/assets/stylesheets/neat';
+// @import '~bourbon-neat/neat';
+@import '~bourbon-neat/core/neat';
+// @import 'common/settings';
+
+@import '~semantic-ui-css/components/sidebar.css';
+@import '~semantic-ui-css/components/segment.css';
+@import '~semantic-ui-css/components/loader.css';
+@import '~semantic-ui-css/components/input.css';
+@import '~semantic-ui-css/components/modal.css';
+@import '~semantic-ui-css/components/dimmer.css';
+@import '~semantic-ui-css/components/transition.css';
+@import '~video.js/dist/video-js.css';
+
+// Base rules
+@import 'common/global';
+@import 'common/colours';
+@import 'common/fonts';
+@import 'common/typography';
+@import 'common/icons';
+@import 'common/lists';
+@import 'common/media';
+@import 'common/helpers';
+@import 'common/themes';
+@import 'common/debug';
+
+// Reuseable components
+@import 'components/logo';
+@import 'components/buttons';
+@import 'components/breadcrumbs';
+@import 'components/comments';
+@import 'components/forms';
+@import 'components/grid';
+@import 'components/filter';
+@import 'components/wp-classes';
+
+// Menus
+@import 'components/menus/desktop-menu';
+@import 'components/menus/mobile-menu';
+
+// Third party overrides
+@import 'components/vendor/semantic-ui/dropdown';
+@import 'components/vendor/semantic-ui/form';
+@import 'components/vendor/semantic-ui/checkbox';
+@import 'components/vendor/marketo';
+
+// Component library base elements
+@import 'components/panels/panels';
+@import 'components/panels/billboard';
+@import 'components/panels/hero';
+@import 'components/panels/banner';
+@import 'components/panels/waves';
+@import 'components/cards';
+@import 'components/lists';
+@import 'components/modals';
+
+// Components used in page builder
+@import 'components/panel-builder/builder';
+@import 'components/panel-builder/texts/text';
+@import 'components/panel-builder/lists/list-image';
+@import 'components/panel-builder/lists/list-text-image';
+@import 'components/panel-builder/forms/form';
+@import 'components/panel-builder/media/media';
+@import 'components/panel-builder/footer/background';
+@import 'components/panel-builder/footer/graphics';
+@import 'components/panel-builder/custom/pricing';
+@import 'components/panel-builder/custom/case-study';
+@import 'components/panel-builder/hacks';
+
+
+@import 'components/slideshows';
+
+
+// Styles for content types
+@import 'layouts/partials/header';
+@import 'layouts/partials/sidebar';
+@import 'layouts/partials/footer';
+@import 'layouts/state/archive';
+@import 'layouts/state/archive/partner-directory';
+@import 'layouts/state/pages';
+@import 'layouts/state/posts';
+@import 'layouts/state/single/forum';

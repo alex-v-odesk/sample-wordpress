@@ -1,0 +1,77 @@
+// Font Awesome | see: http://fontawesome.io/get-started/
+$fa-font-path: '~font-awesome/fonts';
+
+// WP Classes
+$spacer: 10px;
+
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+$font-stack-system: (
+  'Source Sans Pro',
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif,
+);
+$base-font-family: $font-stack-system;
+$heading-font-family: $base-font-family;
+
+$font-stack-system--jp: (
+  'Noto Sans JP',
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif,
+);
+
+// Font Sizes
+$base-font-size: 1em; // 16px from $em-base
+
+// Line height
+$base-line-height: 1.4;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 6px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colours
+$colour--blue: #009eec;
+$colour--blue-dark: #1c2f42;
+$colour--yellow: #ffd71f;
+// $colour--yellow: #ffdc33;
+$colour--grey-light: #f9f9f9;
+$colour--grey-light--lightest: rgba(34, 36, 38, 0.15);
+$colour--grey-medium-light: #ccc;
+$colour--grey-medium: #555;
+$colour--grey-medium-dark: #969696;
+$colour--grey-dark: #333;
+$colour--red-dark: #9f3a38;
+
+// Font Colours
+$colour--type-base: $colour--grey-dark;
+$action-color: $colour--blue;
+$error--red: $colour--red-dark;
+
+// Background Colours
+$colour--bg-blue: $colour--blue;
+$colour--bg-yellow: $colour--yellow;
+$colour--bg-grey-light: $colour--grey-light;
+$colour--bg-grey-medium-light: #e3e3e3;
+$colour--bg-grey-medium: $colour--grey-medium-light;
+$colour--bg-grey-dark: $colour--grey-medium-dark;
+
+// Border
+$colour--border: $colour--grey-light;
+$base-border: 1px solid $colour--border;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

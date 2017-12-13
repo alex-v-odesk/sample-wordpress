@@ -1,0 +1,14 @@
+.c-filter {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+
+  &__item {
+    display: inline-block;
+    padding: 1rem;
+  }
+  &__label {
+    color: $colour--grey-medium-light;
+    padding-right: 1rem;
+  }
+}

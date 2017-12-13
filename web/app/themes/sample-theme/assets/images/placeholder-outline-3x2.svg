@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="98px" height="66px" viewBox="0 0 98 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.2 (33826) - http://www.bohemiancoding.com/sketch -->
+    <title>Slice 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(1.000000, 1.000000)" stroke-width="2" stroke="#444444">
+            <g id="placeholder-outline-3x2">
+                <g id="Page-1">
+                    <polygon id="Stroke-141" points="0 0 96 0 96 64 0 64"></polygon>
+                    <g id="Group" transform="translate(24.727273, 11.636364)">
+                        <polygon id="Stroke-142" points="11.6363636 23.2728727 20.3636364 32.0001455 32 17.4546909 46.5454545 40.7274182 0 40.7274182"></polygon>
+                        <path d="M17.4545455,0.000145454545 C20.6676364,0.000145454545 23.2727273,2.60523636 23.2727273,5.81832727 C23.2727273,9.03141818 20.6676364,11.6365091 17.4545455,11.6365091 C14.2414545,11.6365091 11.6363636,9.03141818 11.6363636,5.81832727 C11.6363636,2.60523636 14.2414545,0.000145454545 17.4545455,0.000145454545 L17.4545455,0.000145454545 L17.4545455,0.000145454545 Z" id="Stroke-143"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

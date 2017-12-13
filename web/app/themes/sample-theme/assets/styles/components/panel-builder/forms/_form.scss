@@ -1,0 +1,19 @@
+.c-form-validation {
+  img {
+    margin: 1rem 0;
+  }
+  h1,
+  p {
+    color: #fff;
+    text-align: center;
+  }
+}
+
+.c-modal .c-form-validation {
+  h1 {
+    color: $colour--blue;
+  }
+  p {
+    color: $colour--grey-dark;
+  }
+}

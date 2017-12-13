@@ -1,0 +1,9 @@
+// Hack media component to sit flush with bottom of panel (row)
+section.l-container .c-panel.c-panel--media {
+  padding-bottom: 0;
+}
+
+// Hack to put padding at bottom of button when in panel only
+.o-panel > .o-button:not(.t-custom-positioning) {
+  padding-bottom: 40px;
+}

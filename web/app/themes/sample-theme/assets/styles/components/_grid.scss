@@ -1,0 +1,206 @@
+// Container system
+.l-container {
+  max-width: 1140px;
+  margin-left: auto;;
+  margin-right: auto;
+  @include grid-container;
+
+  @include grid-media($mobile) {
+    // @include grid-column(4 of 4);
+    // width: 100%;
+  }
+
+  &.l-container--full-width {
+    max-width: 100%;
+  }
+
+  // Span columns and / or grid elements
+  .l-1-of-2 {
+    @include grid-column(1 of 2, $grid-2-columns);
+  }
+  .l-1-of-3 {
+    @include grid-column(1 of 3, $grid-3-columns);
+  }
+  .l-1-of-4 {
+    @include grid-column(1 of 4);
+  }
+  .l-2-of-4 {
+    @include grid-column(2 of 4);
+  }
+  .l-1-of-5 {
+    @include grid-column(1 of 5, $grid-5-columns);
+  }
+  .l-2-of-5 {
+    @include grid-column(2 of 5, $grid-5-columns);
+  }
+  .l-3-of-5 {
+    @include grid-column(3 of 5, $grid-5-columns);
+  }
+  .l-4-of-5 {
+    @include grid-column(4 of 5, $grid-5-columns);
+  }
+  .l-1-of-6 {
+    @include grid-column(1 of 6);
+  }
+  .l-2-of-6 {
+    @include grid-column(2 of 6);
+  }
+  .l-1-of-7 {
+    @include grid-column(1, $grid-7-columns);
+  }
+  .l-2-of-7 {
+    @include grid-column(2, $grid-7-columns);
+  }
+  .l-1-of-8 {
+    @include grid-column(1 of 8);
+  }
+  .l-2-of-8 {
+    @include grid-column(2 of 8);
+  }
+  .l-3-of-8 {
+    @include grid-column(3 of 8);
+  }
+  .l-1-of-10 {
+    @include grid-column(1 of 10, $grid-10-columns);
+  }
+  .l-2-of-10 {
+    @include grid-column(2 of 10, $grid-10-columns);
+  }
+  .l-3-of-10 {
+    @include grid-column(3 of 10, $grid-10-columns);
+  }
+  .l-4-of-10 {
+    @include grid-column(4 of 10, $grid-10-columns);
+  }
+  .l-5-of-10 {
+    @include grid-column(5 of 10, $grid-10-columns);
+  }
+  .l-6-of-10 {
+    @include grid-column(6 of 10, $grid-10-columns);
+  }
+  .l-7-of-10 {
+    @include grid-column(7 of 10, $grid-10-columns);
+  }
+  // HACK
+  // $grid-columns: 7;
+  // $gutter: 25px;
+  // @import "~bourbon-neat/app/assets/stylesheets/neat-helpers";
+  // &.c-archive .l-1-of-3 {
+    // @include grid-column(1 of 3);
+    // @include omega(3n);
+  // }
+
+  // Hack (isn't this what omega is supposed to do?)
+  .l-last {
+    margin-right: 0;
+  }
+
+  // Push / grid-shift columns
+  .l-push-1-of-2 {
+    @include grid-shift(1 of 2, $grid-2-columns);
+  }
+  .l-push-1-of-3 {
+    @include grid-shift(1 of 3, $grid-3-columns);
+  }
+  .l-push-1-of-4 {
+    @include grid-shift(1 of 4, $grid-4-columns);
+  }
+  .l-push-1-of-5 {
+    @include grid-shift(1 of 5, $grid-5-columns);
+  }
+  .l-push-2-of-5 {
+    @include grid-shift(2 of 5, $grid-5-columns);
+  }
+  .l-push-3-of-5 {
+    @include grid-shift(3 of 5, $grid-5-columns);
+  }
+  .l-push-1-of-10 {
+    @include grid-shift(1 of 10, $grid-10-columns);
+  }
+
+  .l-mobile {
+    @include grid-media($mobile) {
+      width: 100%;
+    }
+  }
+
+  // Columns for pricing component (not using Neat, therefore an immoral hack)
+  // Upgrade to Neat v2 to enable multiple grids
+  .l-col-1-of-3 {
+    display: block;
+    float: left;
+    width: 33.33333333%;
+    width: calc(100% / 3);
+    @include grid-media($mobile) {
+      width: 100%;
+    }
+  }
+  .l-col-1-of-5 {
+    display: block;
+    float: left;
+    width: 20%;
+    width: calc(100% / 5);
+  }
+
+  // Card columns for banner component
+  .l-1-of-3.l-no-gutter {
+    @include grid-column(1 of 3, $grid-3-columns--no-gutter);
+  }
+
+
+  // Mobile grid columns
+  [class^="l-1-of-"],
+  [class*=" l-1-of-"],
+  [class^="l-2-of-"],
+  [class*=" l-2-of-"],
+  [class^="l-3-of-"],
+  [class*=" l-3-of-"],
+  [class^="l-4-of-"],
+  [class*=" l-4-of-"],
+  [class^="l-5-of-"],
+  [class*=" l-5-of-"],
+  [class^="l-6-of-"],
+  [class*=" l-6-of-"],
+  [class^="l-7-of-"],
+  [class*=" l-7-of-"],
+  [class^="l-8-of-"],
+  [class*=" l-8-of-"],
+  [class^="l-9-of-"],
+  [class*=" l-9-of-"],
+  [class^="l-10-of-"],
+  [class*=" l-10-of-"] {
+    // &.l-no-gutter {
+    //   margin-left: 0;
+    //   margin-right: 0;
+    // }
+    @include grid-media($mobile) {
+      @include grid-column(1 of 1);
+      // width: 100%;
+    }
+  }
+
+  [class^="l-push"],
+  [class*=" l-push"] {
+    @include grid-media($mobile) {
+      @include grid-shift(0);
+    }
+  }
+}
+
+// Internationalisation hackery
+.h-lang--ja {
+  .c-footer {
+    .l-1-of-7 {
+      @include grid-column(1, $grid-5-columns);
+      @include grid-media($mobile) {
+        width: 100%;
+      }
+    }
+    .l-2-of-7 {
+      @include grid-column(1, $grid-5-columns);
+      @include grid-media($mobile) {
+        width: 100%;
+      }
+    }
+  }
+}

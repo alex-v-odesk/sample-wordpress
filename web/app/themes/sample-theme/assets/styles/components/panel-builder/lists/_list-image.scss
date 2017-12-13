@@ -1,0 +1,75 @@
+/**
+ * Lists for images
+ *
+ * @font-size set to 0 to eliminate whitespace
+ */
+
+.c-image-list {
+  align-items: center;
+  -js-display: flex;
+  display: flex;
+  font-size: 0;
+  justify-content: center;
+  margin: 0;
+
+  .has-hidden-labels  {
+    .c-image-list__label {
+      display: none;
+      font-size: 0;
+    }
+  }
+
+  li.c-image-list__item {
+    &.is-narrow-spacing {
+      $margin: 1rem;
+      margin: 0 $margin 0 $margin;
+      @include grid-media($mobile) {
+        margin: 1rem;
+      }
+    }
+    &.is-slide {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      width: 20%;
+      &img {
+        width: 140px;
+      }
+    }
+    &.is-wide-spacing {
+      $margin: 3rem;
+      margin: 0 $margin 0 $margin;
+      @include grid-media($mobile) {
+        margin: 1rem;
+      }
+    }
+
+    &::last-child {
+      margin-right: 0;
+    }
+  }
+
+  .c-image-list__label {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 1rem 0 0;
+  }
+}
+
+// Target IE10/11 only
+// TODO Investigate whether FlexibilityJS is conflicting
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .c-image-list__item {
+    display: inline-block;
+    margin: 0 1rem 0 1rem !important;
+    max-width: 15% !important;
+    min-width: 5%;
+    &.is-slide {
+      margin: 0 !important;
+      max-width: unset !important;
+      padding: 0;
+      width: 152px !important;
+    }
+  }
+}

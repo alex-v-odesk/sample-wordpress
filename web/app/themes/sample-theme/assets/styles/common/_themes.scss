@@ -1,0 +1,109 @@
+/**
+ * Global theming
+ *
+ * See individual SCSS files for theming relevant to individual UI components
+ */
+
+/**
+ * Background colours
+ */
+.t-bg--white {
+  background-color: #fff;
+}
+.t-bg--grey-light {
+  background-color: $colour--bg-grey-light;
+}
+.t-bg--grey-medium-light {
+  background-color: $colour--bg-grey-medium-light;
+}
+.t-bg--grey-medium {
+  background-color: $colour--bg-grey-medium;
+}
+.t-bg--grey-dark {
+  background-color: $colour--bg-grey-dark;
+}
+.t-bg--yellow {
+  background-color: $colour--bg-yellow;
+}
+.t-bg--blue {
+  background-color: $colour--bg-blue;
+}
+.t-bg--blue-dark {
+  background-color: $colour--blue-dark;
+}
+
+/**
+ * Text colours
+ */
+.t-text--white {
+  color: #fff;
+}
+.t-text--grey-light {
+  color: $colour--grey-light;
+}
+.t-text--grey-medium {
+  color: $colour--grey-medium;
+}
+.t-text--grey-dark {
+  color: $colour--type-base;
+}
+.t-text--blue {
+  color: $colour--blue;
+}
+.t-text--yellow {
+  color: $colour--yellow;
+}
+
+/**
+ * Text alignment
+ */
+.t-align--left {
+  text-align: left;
+}
+.t-align--right {
+  text-align: right;
+}
+.t-align--center {
+  text-align: center;
+}
+.t-align--inline {
+  display: inline-block;
+}
+
+/**
+ * Text font size
+ */
+.t-font--small {
+  font-size: $base-font-size; // modular-scale(0)
+}
+.t-font--medium {
+  font-size: modular-scale(2);
+  .h-lang--ja & {
+    font-size: 22px;
+  }
+}
+// Hack
+.c-panel__paragraph.t-font--medium {
+  font-size: 1.25rem;
+}
+.t-font--large {
+  font-size: modular-scale(4);
+  @include grid-media($mobile){
+    font-size: modular-scale(3);
+  }
+}
+
+/**
+ * Image borders
+ */
+.t-border {
+  border: 1px solid $colour--grey-medium-light;
+}
+
+/**
+ * Custom positioning
+ * (Initially for Banner components only)
+ */
+// .t-custom-positioning {
+//
+// }

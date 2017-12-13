@@ -1,0 +1,124 @@
+//@namespace url(http://www.w3.org/1999/xhtml);
+
+.xdebug-var-dump {
+  background: #fef9fb !important;
+  color: #000 !important;
+  padding: 20px!important;
+  margin: 0!important;
+  text-align: left !important;
+  font-family: Menlo, Monaco, "Consolas", "Lucida Console", "courier new" !important;
+  border-radius: 10px !important;
+  border: solid 1px #eee !important;
+}
+
+.xdebug-error {
+  color: #333 !important;
+  margin: 0!important;
+  font-family: RobotoRegular, Tahoma !important;
+  border-radius: 10px !important;
+  border: solid 1px #eee !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.xdebug-error td ,
+.xdebug-error th {
+  padding: 4px !important;
+  border-collapse: collapse !important;
+  vertical-align: top;
+}
+
+.xdebug-error th {
+  font-weight: normal!important;
+  font-family: RobotoBold, Verdana !important;
+  text-transform: uppercase!important;
+}
+
+.xdebug-error > tbody > tr:first-child > th {
+  //background: $turquoise !important;
+  //color: #fff !important;
+  font-size: 16px !important;
+  font-weight: normal!important;
+  font-family: RobotoRegular, Verdana !important;
+  text-transform: none!important;
+}
+
+// Exclamation mark
+.xdebug-error > tbody > tr:first-child > th span {
+  background: #f39800 !important;
+  margin: 2px;
+  padding: 5px;
+  line-height: 150%;
+  font-size: 12px !important;
+  vertical-align: middle;
+  color: #fff !important;
+  border: solid 2px #f39800;
+  border-radius: 20px !important;
+  height: 20px !important;
+  display: block !important;
+  float: left !important;
+  display: none!important;
+}
+
+.xdebug-error th {
+  //background: -moz-linear-gradient(top, #fff, #ececec) !important;
+  //background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ececec)) !important;
+  background-color: #fef9fb;
+}
+
+.xdebug-error th {
+  border-right: solid 1px #ececec !important;
+}
+.xdebug-error th:last-child {
+  border-right: 0 !important;
+}
+
+.xdebug-error td {
+  background: #fef9fb !important;
+  font-family: Menlo, Monaco, "Consolas", "Lucida Console", "courier new" !important;
+}
+
+.xdebug-error td {
+  border-right: dashed 1px #f0f0f0 !important;
+  border-bottom: dashed 1px #f0f0f0 !important;
+}
+.xdebug-error td:last-child {
+  border-right: 0 !important;
+}
+.xdebug-error tr:last-child td {
+  border-bottom: 0 !important;
+}
+.xdebug-error tr:last-child th ,
+.xdebug-error tr:last-child td {
+  border-radius: 10px !important;
+}
+
+font[color="#00bb00"] ,
+font[color="#4e9a06"] {
+  color: #618e34 !important;
+}
+
+font[color="#ff0000"] ,
+font[color="#cc0000"] {
+  color: #d83473 !important;
+}
+
+font[color="#3465a4"] {
+  color: #0075c2 !important;
+}
+
+.xdebug-error .xdebug-var-dump {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 10px !important;
+  border: none !important;
+}
+
+body > .xdebug-var-dump {
+  margin-top: 50px !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}

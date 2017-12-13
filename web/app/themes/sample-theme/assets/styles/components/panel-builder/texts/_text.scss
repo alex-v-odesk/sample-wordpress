@@ -1,0 +1,106 @@
+/**
+ * UI builder component for text
+ *
+ * @description Used stand alone and within other components
+ *
+ * TODO:
+ * Based on revised scope .c-panel__heading etc need become containers and not
+ * hold styles for text elements
+ */
+
+.c-panel__heading {
+  font-weight: 100;
+  margin-bottom: 1.5rem;
+  &.h-padding--none {
+    margin-bottom: 0;
+  }
+}
+.c-panel__subheading {
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+.c-panel__paragraph {
+  margin-bottom: 0rem;
+}
+
+// Customisations for text component
+.o-text {
+  &.t-custom-positioning {
+    .c-panel {
+      padding: 0;
+    }
+  }
+  .c-panel__heading,
+  .c-panel__subheading,
+  .c-panel__paragraph {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .c-panel__heading,
+  .c-panel__subheading {
+    max-width: 90%;
+  }
+  .c-panel__paragraph {
+    max-width: 60%;
+  }
+  .c-panel__script {
+    form {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// Currently duplicates .c-post__content line 28 in ..states/_posts.scss
+.c-text-editor {
+  h1 {
+    font-size: 50px;
+    line-height: 55px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  h4 {
+    font-size: 28px;
+    font-weight: 100;
+    font-style: italic;
+    line-height: 30px;
+    margin-bottom: 16px;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+  h6 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    margin-bottom: 16px;
+  }
+  p {
+    line-height: 22px;
+    margin-bottom: 1rem;
+  }
+  ol {
+    font-weight: 400;
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 1.2em;
+  }
+  ul {
+    font-weight: 400;
+    list-style-type: disc;
+    list-style-position: outside;
+    padding-left: 1.2em;
+  }
+}

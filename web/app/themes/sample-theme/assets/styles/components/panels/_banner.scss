@@ -1,0 +1,53 @@
+.c-banner__content {
+  display: flex;
+  flex-direction: column;
+  @include grid-media($mobile) {
+    padding: 0 4rem;
+  }
+}
+
+.c-banner {
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  // flex-basis: auto;
+  // flex-shrink: 0;
+  justify-content: center;
+  // padding: 50px 0;
+  //
+  &.t-custom-positioning {
+    min-height: 0;
+  }
+
+  .c-banner__credit {
+    font-size: modular-scale(1);
+    text-align: right;
+    margin: 2rem 0;
+  }
+
+  .c-banner__text {
+    font-size: modular-scale(2);
+    font-weight: normal;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .c-banner {
+    min-height: 600px;
+  }
+}
+
+
+.c-banner--3-cols {
+  // display: flex;
+
+  .c-card-temp {
+    align-items: stretch;
+    padding: 30px;
+
+    &.c-card-temp--overlay {
+      margin: -30px 0;
+      padding: 30px;
+    }
+  }
+}

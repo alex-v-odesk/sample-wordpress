@@ -1,0 +1,29 @@
+/**
+ * Waves background image panel
+ *
+ * Assumes panel above has light grey background
+ */
+
+.c-waves {
+  background-image: url('../images/waves.svg');
+  background-repeat: repeat-x;
+  background-position: center 16px;
+  font-size: 0;
+  height: 80px;
+
+  &.c-waves--small {
+    background-image: url('../images/waves-small.svg');
+    background-position: center 35px;
+    height: 60px;
+  }
+
+  @include grid-media($mobile) {
+    display: none;
+  }  
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .c-waves {
+    display: none;
+  }
+}

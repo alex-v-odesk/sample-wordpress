@@ -1,0 +1,24 @@
+
+.c-modal {
+  padding: 60px 0;
+  position: relative;
+
+  .c-modal__close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
+
+  .c-modal__header {
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .c-modal__text {
+    font-weight: 300;
+  }
+
+  .c-modal__title {
+    @include font-source-sans-pro(light, modular-scale(2), 1.3rem, $colour--blue);
+  }
+}

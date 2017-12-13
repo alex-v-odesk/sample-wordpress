@@ -1,0 +1,24 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ],
+    "customizer": [
+      "./scripts/customizer.js"
+    ]
+  },
+  "watch": [
+    "templates/**/**/*.php",
+    "src/**/*.php"
+  ],
+  "publicPath": "/app/themes/sample-theme",
+  "devUrl": "http://sample-theme.local",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]",
+  "browsers": [
+    "last 4 versions",
+    "> 2%",
+    "ie >= 9"
+  ]
+}

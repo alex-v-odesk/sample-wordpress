@@ -1,0 +1,51 @@
+/**
+ * Base styles for the component / panel builder custom template
+ *
+ * All significant vertical spacing is in this file, which does
+ * break the BEM / OOCSS name spacing
+ */
+
+// Target padding for first component container for all content types ...
+// ... Except the home page
+.h-home .l-main section:first-child {
+  padding: 0;
+}
+// ... Except the archive and single posts
+.h-post .l-main section:first-child {
+  padding-bottom: 0;
+}
+
+// .h-padding {
+//   padding-top: 20px;
+//   padding-bottom: 20px;
+// }
+
+// Padding on all components
+.l-main section.l-container {
+  // Target padding for first component container for all content types ...
+  &:first-child {
+    padding-top: 100px;
+    padding-bottom: 40px;
+    &.t-custom-positioning {
+      padding-bottom: 0;
+    }
+  }
+  .c-panel {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  & .t-custom-positioning {
+    padding: 0;
+    .c-panel {
+      padding: 0;
+    }
+  }
+}
+// ... Except remove padding for the home page
+.h-home .l-main section.l-container:first-child {
+  padding: 0;
+}
+// ... And the archive and single posts
+.h-post .l-main section.l-container:first-child {
+  padding-bottom: 0;
+}

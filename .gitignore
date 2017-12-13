@@ -1,0 +1,49 @@
+# Application
+# !web/app/plugins/.gitkeep
+web/app/mu-plugins/*/
+web/app/upgrade
+web/app/uploads/*
+!web/app/uploads/.gitkeep
+
+# WordPress
+web/.htaccess
+
+# WP-CLI
+db-sync
+sql-dump-*.sql
+
+# Dotenv
+.env
+.env.*
+!.env.example
+
+# Vendor (e.g. Composer)
+vendor/*
+!vendor/.gitkeep
+
+# Node Package Manager
+node_modules
+
+# Vagrant
+bin
+.vagrant
+
+
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+# dist
+!web/app/plugins/**/dist/
+!web/app/plugins/**/vendor/
+bower_components
+node_modules
+# vendor
+npm-debug.log
+!web/app/plugins/**/
+.DS_Store
+/web/wp/wp-content/plugins/hello.php
+/web/wp/wp-content/themes/*
+/web/app/debug.log
+debug.log
+
+/web/app/cache/*
+web/app/themes/sample-theme/.cache-loader

@@ -1,0 +1,82 @@
+/**
+ * A component used as a hero content holder in the header of the
+ * homepage
+ *
+ * Can have an image or video as a background
+ *
+ */
+
+.c-video {
+  font-size: 0;
+  height: auto;
+  margin: 40px;
+  overflow: hidden;
+
+  &.c-video--hero {
+    margin: 0;
+  }
+
+  @include grid-media($huge){
+    height: 700px;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    @include grid-media($huge){
+      transform: translateX(0) translateY(-25%);
+    }
+  }
+}
+
+.c-hero {
+  position: relative;
+  padding: 0;
+  text-align: center;
+
+  .c-panel__title {
+    font-weight: normal;
+    margin-bottom: 1.375rem;
+    $padding: 0%;
+    padding: 0 $padding 0 $padding;
+    @include grid-media($mobile){
+      display: none;
+    }
+  }
+
+  .c-panel__text {
+    font-weight: normal;
+    margin-bottom: 3.75rem;
+    $padding: 0;
+    padding: 0 $padding 0 $padding;
+    @include grid-media($mobile){
+      display: none;
+    }
+  }
+
+  .c-hero__overlay {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(51, 51, 51, 0.3);
+    align-items: center;
+    // -js-display: flex;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include grid-media($mobile){
+    .c-button {
+      margin-top: 30%;
+    }
+  }
+}
+
+// Target IE10/11 only
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .c-hero__container {
+    padding-top: 300px;
+  }
+}

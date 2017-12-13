@@ -1,0 +1,32 @@
+.c-case-study {
+  .c-case-study__heart {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.c-case-study-list {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .c-case-study-list__credits {
+    margin-bottom: 0;
+  }
+
+  .c-case-study-list__image {
+    border-radius: 100%;
+    border: 2px solid $colour--blue;
+    margin: 0 1.5rem 0 0;
+
+    display: inline-block;
+    text-align: left;
+
+    height: 100%;
+    width: 90px;
+
+  }
+}

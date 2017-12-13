@@ -1,0 +1,109 @@
+.c-card {
+  color: $colour--blue;
+  // padding: 0 2rem 0 2rem;
+  text-align: center;
+
+  .c-card__number {
+    font-weight: bold;
+    font-size: modular-scale(4);
+    margin: 0;
+  }
+
+  .c-card__link {
+    display: block;
+    margin: 1rem 0 0 0;
+  }
+
+  .c-card__symbol {
+    font-size: 2.2rem;
+    margin-left: 0.25rem;
+  }
+
+  .c-card__text {
+    color: $colour--type-base;
+    font-weight: normal;
+    // margin: 1rem 0 0 0;
+  }  
+
+  .c-card__title {
+    margin-bottom: 1rem;
+    &.t-font--medium {
+      font-size: modular-scale(1);
+    }
+    &.t-font--large {
+      font-size: modular-scale(2);
+    }
+  }
+
+  &.c-card--footer {
+    text-align: left;
+    padding: 4rem 0 4rem 0;
+
+    h2.c-card__title {
+      color: #fff;
+      // font-size: modular-scale(1);
+      // font-weight: normal;
+      // margin: 0;
+    }
+
+    @include grid-media($mobile){
+      text-align: center;
+    }
+  }
+
+  &.c-card--logo {
+    padding-top: 2.375rem;
+  }
+
+  &.c-card--statistic {
+    text-align: left;
+
+    @include grid-media($mobile) {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .c-card__text {
+      color: $colour--blue;
+      // margin: 0 0 4.0625rem 0; // 65px bottom total
+    }
+
+    .c-card__title {
+      font-size: modular-scale(0);
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+}
+
+/**
+ * Currently not required
+ * Perhaps replace / combine with image list
+ * and make variation with font-size: 0;
+ */
+
+// .c-card-list {
+//   align-items: center;
+//   display: flex;
+//   justify-content: center;
+//   margin: 0;
+
+//   .c-card-list__item {
+//     $margin: 3rem;
+//     margin: 0 $margin 0 $margin;
+//     padding: 0 $margin 0 $margin;
+//   }
+
+//   .c-card-list__text {
+//     font-size: 1rem;
+//     font-weight: normal;
+//     margin: 1rem 0 0;
+//   }
+
+//   .c-card-list__title {
+//     font-size: modular-scale(2);
+//     font-weight: normal;
+//     margin: 1rem 0 0;
+//   }
+// }
+

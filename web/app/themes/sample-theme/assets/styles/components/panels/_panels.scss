@@ -1,0 +1,37 @@
+
+// A base component similar to a row containing groups of elements,
+// in particular card elements to form a variety of UI content areas
+//
+// .c-panel__title, .c-panel__text, .c-panel__image are used as
+// element containers, with specific styling applied in components
+// found in /component-builder/ directory
+
+
+.c-panel {
+  text-align: center;
+
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+  &.c-panel--media {
+    display: flex;
+    font-size: 0;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+
+  .c-panel__text {
+    // margin-bottom: 1.75rem;
+    // margin-bottom: 0;
+    $padding: 16%;
+    // padding: 1.25rem $padding 0 $padding; // 40px bottom total
+  }
+
+  .c-panel__title {
+    $padding: 10%;
+    // padding: 0 $padding 0 $padding; // 60px top total
+  }
+}

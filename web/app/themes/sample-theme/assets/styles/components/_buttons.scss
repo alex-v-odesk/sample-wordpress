@@ -1,0 +1,219 @@
+@mixin button {
+  appearance: none;
+  background-color: $action-color;
+  border: 3px solid $action-color;
+  border-radius: $base-border-radius;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $base-font-family;
+  font-size: 1.625 * $base-font-size; // 26px
+  font-size: modular-scale(1); // 28px
+  -webkit-font-smoothing: antialiased;
+  font-weight: normal;
+  line-height: 1;
+  padding: $small-spacing $base-spacing;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $base-duration $base-timing;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: shade($action-color, 20%);
+    color: #fff;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+
+    &:hover {
+      background-color: $action-color;
+    }
+  }
+
+}
+
+// $all-buttons: assign-inputs('.c-button');
+//
+// #{$all-buttons} {
+//   @include button;
+// }
+
+.c-button {
+  @include button;
+}
+
+// Theme overrides
+.c-banner {
+  .c-button {
+    margin-top: 50px;
+  }
+  &.t-custom-positioning .c-button {
+    margin-top: 0;
+  }
+}
+
+.t-custom-positioning .c-button {
+  margin: 0;
+}
+
+.l-main section.l-container .o-button .c-panel {
+  padding: 0;
+}
+
+// Button styles
+.c-button {
+  margin-top: 0;
+  transition: all, 0.3s;
+  &.c-button--blue {
+    background-color: $colour--blue;
+    border-color: $colour--blue;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: $colour--blue;
+      color: $colour--blue;
+    }
+  }
+
+  &.c-button--grey-light {
+    background-color: $colour--grey-light;
+    border-color: $colour--grey-light;
+    color: $colour--type-base;
+    &:hover {
+      background-color: transparent;
+      border-color: $colour--grey-light;
+      color: $colour--grey-light;
+    }
+  }
+
+  &.c-button--grey-medium {
+    background-color: $colour--grey-medium;
+    border-color: $colour--grey-medium;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: $colour--grey-medium;
+      color: $colour--grey-medium;
+    }
+  }
+
+  &.c-button--grey-dark {
+    background-color: $colour--grey-dark;
+    border-color: $colour--grey-dark;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: $colour--grey-dark;
+      color: $colour--grey-dark;
+    }
+  }
+
+  &.c-button--white {
+    background-color: #fff;
+    border-color: #fff;
+    color: #fff;
+    &:hover {
+      background-color: transparent;
+      border-color: $colour--grey-dark;
+      color: $colour--grey-dark;
+    }
+  }
+
+  &.c-button--yellow {
+    background-color: $colour--yellow;
+    border-color: $colour--yellow;
+    color: $colour--type-base;
+    &:hover {
+      border-color: $colour--grey-dark;
+      color: $colour--grey-dark;
+    }
+  }
+
+  &.c-button--outline {
+    background-color: transparent;
+  }
+
+  &.c-button--outline.c-button--blue {
+    color: $colour--blue;
+    &:hover {
+      background-color: $colour--blue;
+      border-color: $colour--blue;
+      color: #fff;
+    }
+  }
+
+  &.c-button--outline.c-button--grey-light {
+    color: $colour--grey-light;
+    &:hover {
+      background-color: $colour--grey-light;
+      color: #fff;
+    }
+  }
+
+  &.c-button--outline.c-button--grey-medium {
+    color: $colour--grey-medium;
+    &:hover {
+      background-color: $colour--grey-medium;
+      color: #fff;
+    }
+  }
+
+  &.c-button--outline.c-button--grey-dark {
+    color: $colour--grey-dark;
+    &:hover {
+      background-color: $colour--grey-dark;
+      color: #fff;
+    }
+  }
+
+  &.c-button--outline.c-button--yellow {
+    color: $colour--yellow;
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: $colour--yellow;
+    }
+  }
+
+  &.c-button--outline.c-button--white {
+    color: #fff;
+    &:hover {
+      background-color: #fff;
+      border-color: #fff;
+      color: $colour--blue;
+    }
+  }
+
+  &.c-button--small {
+    padding: 0.75*$small-spacing 0.75*$base-spacing;
+  }
+
+  &.t-align--right {
+    float: right;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+}
+
+.c-button-separator {
+  font-size: modular-scale(1);
+  $margin: 5%;
+  margin: 0 $margin 0 $margin;
+}
+
+// Hack Chrome 29+ rendering only
+// http://stackoverflow.com/a/25975282
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm)
+{
+  .c-button {
+    font-family: 'Source Sans Pro Button';
+  }
+}
